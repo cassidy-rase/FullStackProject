@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+        <title>Search</title>
+    </head>
+    <body>
+        <header>
+<!-- NAVIGATION -->
+            <div class="topnav" id="myTopnav">
+                <a href="index.html" class="active">Home</a>
+                <a href="products.html">Products</a>
+                <a href="search.html">Search</a>
+                <a href="contact.html">Contact</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Admin 
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="admin.html">Manage Products</a>
+                        </div>
+                    </div> 
+                <a href="javascript:void(0);" class="icon" onclick="topNav()">&#9776;</a>
+            </div>
+        </header>
+<!-- MAIN SECTION -->
+        <div class="search">
+            <h1>What can we help you find?</h1>
+            <div class="category">
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option value="Moisturizer">Moisturizer</option>
+                    <option value="Boosters">Boosters</option>
+                    <option value="Masks">Masks</option>
+                    <option value="Makeup">Makeup</option>
+                </select>
+            </div>
+            <div class="category">
+                <label for="looking">I'm looking for...</label>
+                <input type="search" id="looking">
+            </div>
+            <div class="category">
+                <label for="price">My price range is:</label>
+                <select id="price">
+                    <option>under $25</option>
+                    <option>under $75</option>
+                    <option>under $100</option>
+                </select>
+            </div>
+            <button type="button">Help me!</button>
+        </div>
+    <script src="./js/admin.js"></script>
+    <script src="./js/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+<!-- NAVIGATION -->
+            <div class="topnav" id="myTopnav">
+                <a href="index.html" class="active">Home</a>
+                <a href="products.html">Products</a>
+                <a href="search.html">Search</a>
+                <a href="contact.html">Contact</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <i class="fa fa-caret-down">Admin</i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="admin.html">Manage Products</a>
+                        </div>
+                    </div> 
+                <a href="javascript:void(0);" class="icon" onclick="topNav()">&#9776;</a>
+            </div>
+        </header>
+<!-- CONTACT FORM -->
+        <div class="contact">
+            <div class="contact-left">
+                <img src="img/image7.jpg" alt="contact image"/>
+            </div>
+            <div class="contact-right">
+                <h1>We'd love to hear from you!</h1>
+                <!-- <div id="error"></div> -->
+                <form name="myForm" action="/" method="POST" onsubmit="return validateEmail(), validateForm()">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name.." required data-value-missing="This field is required!" > <br/>
+                    <label for="email">Email:</label>
+                    <input type ="email" id="email" name="email" placeholder="Your email.."  > <br/>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Your phone number.." required data-value-missing="This field is required!" > <br/>
+                    <label for="contact">Preferred contact method:</label><br/>
+                    <label for="email-radio">Email</label>
+                    <input type="radio" name="contact" value="email" id="email-radio" class="contact-option">
+                    <label for="phone-radio">Phone</label>
+                    <input type="radio" name="contact" value="phone" id="phone-radio" class="contact-option"> <br/>
+                    <label for="how">How did you hear about us?</label><br/>
+                    <label for="conference">Conference</label>
+                    <input type="checkbox" name="how" value="conference" id="conference" class="contact-option">
+                    <label for="tv">TV</label>
+                    <input type="checkbox" name="how" value="tv" id="tv" class="contact-option">
+                    <label for="radio">Radio</label>
+                    <input type="checkbox" name="how" value="radio" id="radio" class="contact-option">
+                    <label for="word">Word of mouth</label>
+                    <input type="checkbox" name="how" value="mouth" id="word" class="contact-option">
+                    <label for="other">Other</label>
+                    <input type="checkbox" name="how" value="other" id="other" class="contact-option"><br/>
+                    <label for="comments">Comments:</label> <br/>
+                    <textarea name="comments" placeholder="Comments" id="comments"></textarea><br/>
+                    <button type="submit" id="myButton" value="register">Submit</button>
+                </form>
+            </div>
+        </div>
+        <script src="./js/admin.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>

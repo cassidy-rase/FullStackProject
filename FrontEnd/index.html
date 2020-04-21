@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<!-- HEAD -->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Brilla</title>
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+<!-- BODY -->
+    <body>
+        <header>
+<!-- NAVIGATION -->
+            <div class="topnav" id="myTopnav">
+                <a href="index.html" class="active">Home</a>
+                <a href="products.html">Products</a>
+                <a href="search.html">Search</a>
+                <a href="contact.html">Contact</a>
+                    <div class="dropdown">
+                        <button class="dropbtn"> 
+                            <i class="fa fa-caret-down">Admin</i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="admin.html">Manage Products</a>
+                        </div>
+                    </div> 
+                <a href="javascript:void(0);" class="icon" onclick="topNav()">&#9776;</a>
+            </div>
+        </header>
+<!-- TOP OF PAGE -->
+        <div class="main-home">
+            <div class="main-heading">
+                <h1>Skincare. Redefined.</h1>
+                <button type="button" class="shop-button"><a href="products.html">Shop Now</a></button>
+            </div>
+        </div>
+<!-- FEATURES SECTION -->
+        <h2 class="whats-new">What's new this month?</h2>
+        <div class="features">
+            <figure class="feature">
+                <img src="img/image10.jpg" alt="" />
+                <figcaption>Pomifera Oil</figcaption>
+            </figure>
+            <figure class="feature">
+                <img src="img/feature2.jpg" alt="" />
+                <figcaption>Marula Oil Cleanser</figcaption>
+            </figure>
+            <figure class="feature">
+                <img src="img/feature3.jpg" alt="" />
+                <figcaption>Pomegranate & Oat Moisturizer</figcaption>
+            </figure>
+        </div>
+<!-- SLIDESHOW SECTION -->
+        <div class="wrap">
+            <div class="right">
+                <h2 class="arrivals">Why Brilla?</h2>
+                <p class="why">It takes less than a minute for chemicals from skin care products to get into your blood stream. That is why we set out to develop a super effective, free of harmful chemicals skin care line. This line produces such significant results that women and men all over the country are switching to Brilla and not only are they looking better on the outside, they are healthier on the inside as well.</p>
+            </div>
+            <div class="left">
+                <img id="image1" src="img/image1.jpg" alt="moisturizer"/>
+                <!-- <script id="slideshow">
+                    var imgArray = [
+                    'img/image1.jpg',
+                    'img/image2.jpg',
+                    'img/image3.jpg'],
+                    curIndex = 0;
+                    imgDuration = 5000;
+
+                    function slideShow() {
+                        document.getElementById('image1').src = imgArray[curIndex];
+                        curIndex++;
+                        if (curIndex === imgArray.length) { curIndex = 0; }
+                        setTimeout("slideShow()", imgDuration);
+                    }
+                    slideShow();
+                </script> -->
+            </div>
+        </div>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
