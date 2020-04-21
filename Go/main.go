@@ -128,76 +128,6 @@ func handleRequest(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-// USER TABLE
-
-// func handleRequest(w http.ResponseWriter, r *http.Request) {
-
-// 	if r.Method == http.MethodGet {
-
-// 		users := []User{}
-
-// 		enableCors(&w)
-
-// 		query := `SELECT id, first_name, last_name, email FROM user`
-
-// 		rows, err := db.Query(query)
-
-// 		if err != nil {
-// 			fmt.Println(err)
-// 			return
-// 		}
-
-// 		for rows.Next() {
-
-// 			var user User
-
-// 			err := rows.Scan(&user.ID, &user.FirstName, &user.LastName, &user.Email)
-
-// 			if err != nil {
-// 				fmt.Println(err)
-// 				return
-// 			}
-
-// 			users = append(users, user)
-// 		}
-
-// 		w.WriteHeader(http.StatusOK)
-
-// 		json.NewEncoder(w).Encode(users)
-// 	}
-
-// 	if r.Method == http.MethodPost {
-
-// 		var user User
-
-// 		enableCors(&w)
-
-// 		json.NewDecoder(r.Body).Decode(&user)
-
-// 		query := `INSERT INTO user (first_name, last_name, email) values (?,?,?)`
-
-// 		res, err := db.Exec(query, user.FirstName, user.LastName, user.Email)
-
-// 		if err != nil {
-// 			fmt.Println(err)
-// 			return
-// 		}
-
-// 		id, err := res.LastInsertId()
-
-// 		if err != nil {
-// 			fmt.Println(err)
-// 			return
-// 		}
-
-// 		user.ID = id
-
-// 		w.WriteHeader(http.StatusCreated)
-
-// 		json.NewEncoder(w).Encode(user)
-// 	}
-// }
-
 var saveID int64
 
 func handleUpdate(w http.ResponseWriter, r *http.Request) {
@@ -282,7 +212,6 @@ func handleDelete(w http.ResponseWriter, r *http.Request) {
 				return
 			}
 			fmt.Println(user)
-			//users = append(users, user)
 			saveID = user.ID
 		}
 
@@ -321,7 +250,6 @@ func createProduct(w http.ResponseWriter, r *http.Request) {
 
 		products := []Product{}
 
-		// query := `SELECT product_id, product_typeid, product_name, product_price FROM product`
 		query := `SELECT * FROM database.product`
 
 		rows, err := db.Query(query)
@@ -412,7 +340,6 @@ func updateProduct(w http.ResponseWriter, r *http.Request) {
 				return
 			}
 			fmt.Println(product)
-			//users = append(users, user)
 			saveProductID = product.ProductID
 		}
 
